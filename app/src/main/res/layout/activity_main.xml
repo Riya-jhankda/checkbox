@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_quest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" What kind of tea do you want ? "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RadioGroup
+        android:id="@+id/rg_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_quest">
+
+        <RadioButton
+            android:id="@+id/rb_milk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="milk" />
+
+        <RadioButton
+            android:id="@+id/rb_water"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Water" />
+
+        <RadioButton
+            android:id="@+id/juice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Juice" />
+
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cb_bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bubble"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_Malai" />
+
+    <CheckBox
+        android:id="@+id/cb_fruits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fruits"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_check" />
+
+    <CheckBox
+        android:id="@+id/cb_Malai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Malai"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_fruits" />
+
+    <Button
+        android:id="@+id/btn_Order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_bubble" />
+
+    <TextView
+        android:id="@+id/tv_final"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your final order is ready :)"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Order"
+        tools:layout_editor_absoluteX="16dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
